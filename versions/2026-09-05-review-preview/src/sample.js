@@ -1,0 +1,49 @@
+(function(root){
+const text=`TSM1 is the managing director and major shareholder of Kite Tech Limited (KTL) and Silverline Consultants Limited (SLC). LPY1 is the wife of TSM1 and the finance manager of KTL. CWH1 is the brother of LPY1 and the sales manager of KTL. YMC1 is the registered director of SLC. NKF1 was a project coordinator of KTL from Jan 2021 to Aug 2023. ("Amy Ho") is the receptionist of KTL.
+FHL1 is the owner of Apex Data Services Limited (ADS). FKL1 is the son of FHL1 and an account manager of ADS. In Sep 2021 TSM1 and FHL1 agreed that KTL and ADS would submit cover bids for each other.
+LWM1 is a senior procurement officer of the Department of Digital Services (DDS). HCK1 is the chief systems manager of DDS. PSY1 is an IT officer of DDS. ("Ben Kwok") is a clerical officer of DDS. WSL1 is an auditor of DDS.
+In Mar 2021 KSK1 of Golden Bridge Advisory (GBA) introduced TSM1 to HCK1. In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by ("李志強"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted. In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1. LWM1 accepted kickbacks of 8% from TSM1 and awarded 19 of 23 DDS quotations to KTL.
+CTF1 is the supplies manager of the Regional Hospital Supplies Office (RHS). OKW1 is a biomedical engineer of RHS. In May 2022 KSK1 introduced TSM1 and FHL1 to CTF1. In Nov 2022 RHS awarded a HK$3.1 million order to ADS, and FKL1 is suspected of paying a 6% rebate to CTF1. OKW1 allegedly signed an acceptance certificate for tablets that were never delivered.
+MYL1 is an executive officer of the Eastern District Office (EDO). In Aug 2022 SLC paid HK$260,000 for the renovation of the flat of MYL1. In Feb 2023 EDO awarded a HK$1.2 million contract to SLC on the recommendation of MYL1.
+BLS1 is a relationship manager of Metro Commercial Bank (MCB). In Apr 2023 LPY1 made eleven cash deposits just below HK$120,000 into the KTL account, and BLS1 is suspected of advising her. In Jun 2023 WSL1 reported the quotation pattern. In Aug 2023 NKF1 resigned and complained. In Oct 2023 law enforcement arrested the key suspects.`;
+const d=ChartCore.empty();d.title='The Kite Tech network';d.graph.sources=[{id:'sample-story',kind:'user-supplied sample',text}];d.extraction={kind:'reviewed',warnings:[],notice:'Reviewed example prepared from the supplied story. “Reported” means stated in the story, not independently proven. Click Parse text to test automatic extraction.'};
+const groups=[['KTL','Kite Tech Limited'],['DDS','Department of Digital Services'],['ADS','Apex Data Services Limited'],['RHS','Regional Hospital Supplies Office'],['SLC','Silverline Consultants Limited'],['EDO','Eastern District Office'],['GBA','Golden Bridge Advisory'],['JHR','Jade Harbour Restaurant'],['MCB','Metro Commercial Bank']];
+d.graph.groups=groups.map(([id,name])=>({id,name,shortName:id}));
+for(const [id,name]of groups)d.graph.entities.push({id,name,type:['KTL','ADS','SLC'].includes(id)?'company':id==='JHR'?'location':'organisation',group:id,role:''});
+const people=[['TSM1','Managing director / major shareholder','KTL'],['LPY1','Finance manager','KTL'],['CWH1','Sales manager','KTL'],['NKF1','Former project coordinator','KTL'],['Amy Ho','Receptionist','KTL'],['YMC1','Registered director','SLC'],['FHL1','Owner','ADS'],['FKL1','Account manager','ADS'],['LWM1','Senior procurement officer','DDS'],['HCK1','Chief systems manager','DDS'],['PSY1','IT officer','DDS'],['Ben Kwok','Clerical officer','DDS'],['WSL1','Auditor','DDS'],['CTF1','Supplies manager','RHS'],['OKW1','Biomedical engineer','RHS'],['MYL1','Executive officer','EDO'],['BLS1','Relationship manager','MCB'],['KSK1','Associated with GBA','GBA'],['李志強','Restaurant owner','JHR']];
+for(const [id,role,group]of people)d.graph.entities.push({id,name:id,type:'person',role,group});
+d.graph.entities.push({id:'KTL-account',name:'KTL bank account',type:'account',group:'KTL',role:'Bank not specified in story'},{id:'Rolex',name:'Rolex watch',type:'object',role:'Benefit received by HCK1',group:'DDS'},{id:'MYL-flat',name:'MYL1’s flat',type:'location',role:'Renovation benefit',group:'EDO'},{id:'KTL-carpark',name:'KTL car park',type:'location',role:'Cash handover location',group:'KTL'});
+const sentence=(term)=>text.split(/(?<=[.!?])\s+(?=[A-Z(])/).find(s=>s.includes(term))||'';
+let seq=0;function edge(id,source,target,label,type,extra={}){d.graph.relationships.push({id:id||'employment-'+(++seq),source,target,label,type,certainty:'reported',directed:!['family','association','meeting'].includes(type),sourceId:'sample-story',sourceText:sentence(source),...extra});}
+for(const [id,role,group]of people){edge(null,id,group,role,id==='KSK1'?'association':/Owner|shareholder|owner/.test(role)?'ownership':'employment',id==='NKF1'?{date:'2021-01',endDate:'2023-08'}:{});}
+edge('slc-owner','TSM1','SLC','Managing director / major shareholder','ownership');
+edge('wife','LPY1','TSM1','Wife of','family',{directed:true});edge('brother','CWH1','LPY1','Brother of','family',{directed:true});edge('son','FKL1','FHL1','Son of','family',{directed:true});
+edge('cover','TSM1','FHL1','Cover-bid agreement','association',{date:'2021-09',sourceText:sentence('cover bids')});
+edge('cover-companies','KTL','ADS','Mutual cover bids','association',{date:'2021-09',sourceText:sentence('cover bids')});
+edge('introduced-dds','TSM1','HCK1','Introduced by KSK1','association',{date:'2021-03',sourceText:sentence('In Mar 2021')});
+edge('dinner','TSM1','HCK1','Dinner at JHR','meeting',{date:'2021-11',sourceText:sentence('In Nov 2021')});
+edge('cash-hck','TSM1','HCK1','Cash benefit','payment',{amount:120000,currency:'HKD',date:'2021-11',certainty:'admitted',sourceText:sentence('In Nov 2021')});
+edge('watch','TSM1','HCK1','Rolex watch','benefit',{date:'2021-11',certainty:'admitted',objectId:'Rolex',sourceText:sentence('In Nov 2021')});
+edge('watch-possession','HCK1','Rolex','Received','association',{certainty:'admitted',date:'2021-11',sourceText:sentence('In Nov 2021')});
+edge('envelope','TSM1','LWM1','Envelope of cash','payment',{date:'2022-03',notes:'Witnessed by NKF1 in the KTL car park. Amount not stated.',sourceText:sentence('In Mar 2022')});
+edge('witness','NKF1','LWM1','Witnessed cash handover','association',{date:'2022-03',sourceText:sentence('In Mar 2022')});
+edge('kickback','TSM1','LWM1','8% kickbacks','payment',{rate:'8%',sourceText:sentence('accepted kickbacks')});
+edge('quotations','LWM1','KTL','Awarded 19 of 23 quotations','contract',{sourceText:sentence('accepted kickbacks')});
+edge('intro-rhs1','TSM1','CTF1','Introduced by KSK1','association',{date:'2022-05',sourceText:sentence('In May 2022')});
+edge('intro-rhs2','FHL1','CTF1','Introduced by KSK1','association',{date:'2022-05',sourceText:sentence('In May 2022')});
+edge('order','RHS','ADS','Supply order','contract',{amount:3100000,currency:'HKD',date:'2022-11',sourceText:sentence('In Nov 2022')});
+edge('rebate','FKL1','CTF1','6% rebate','payment',{rate:'6%',date:'2022-11',certainty:'suspected',notes:'No absolute rebate amount inferred; calculation basis is not confirmed.',sourceText:sentence('In Nov 2022')});
+edge('certificate','OKW1','RHS','Signed acceptance · goods undelivered','association',{certainty:'alleged',sourceText:sentence('OKW1 allegedly')});
+edge('renovation','SLC','MYL1','Flat renovation','benefit',{amount:260000,currency:'HKD',date:'2022-08',objectId:'MYL-flat',sourceText:sentence('In Aug 2022')});
+edge('flat','MYL1','MYL-flat','Flat of MYL1','association',{sourceText:sentence('In Aug 2022')});
+edge('edo-contract','EDO','SLC','Contract award','contract',{amount:1200000,currency:'HKD',date:'2023-02',sourceText:sentence('In Feb 2023')});
+edge('recommendation','MYL1','SLC','Recommended contract award','association',{date:'2023-02',sourceText:sentence('In Feb 2023')});
+edge('deposits','LPY1','KTL-account','11 cash deposits','transaction',{date:'2023-04',notes:'Each deposit just below HK$120,000. Exact amounts and aggregate total are unknown.',sourceText:sentence('In Apr 2023')});
+edge('account','KTL','KTL-account','Account holder','ownership');
+edge('advice','BLS1','LPY1','Advised on deposits','association',{date:'2023-04',certainty:'suspected',sourceText:sentence('In Apr 2023')});
+edge('restaurant','TSM1','JHR','Hosted dinner','meeting',{date:'2021-11',sourceText:sentence('In Nov 2021')});
+edge('carpark','TSM1','KTL-carpark','Cash handover location','association',{date:'2022-03',sourceText:sentence('In Mar 2022')});
+const events=[['2021-01','NKF1 began work at KTL',['NKF1','KTL'],'NKF1 was'],['2021-03','KSK1 introduced TSM1 to HCK1',['KSK1','TSM1','HCK1'],'In Mar 2021'],['2021-09','Cover-bid agreement',['TSM1','FHL1','KTL','ADS'],'cover bids'],['2021-11','Dinner, Rolex and HK$120,000',['TSM1','HCK1','JHR'],'In Nov 2021'],['2022-03','Cash handover witnessed by NKF1',['TSM1','LWM1','NKF1'],'In Mar 2022'],['2022-05','Introductions to CTF1',['KSK1','TSM1','FHL1','CTF1'],'In May 2022'],['2022-08','SLC funded MYL1’s renovation',['SLC','MYL1'],'In Aug 2022'],['2022-11','HK$3.1m order and suspected rebate',['RHS','ADS','FKL1','CTF1'],'In Nov 2022'],['2023-02','EDO awarded SLC HK$1.2m contract',['EDO','SLC','MYL1'],'In Feb 2023'],['2023-04','Eleven cash deposits; suspected advice',['LPY1','BLS1','KTL-account'],'In Apr 2023'],['2023-06','WSL1 reported quotation pattern',['WSL1'],'In Jun 2023'],['2023-08','NKF1 resigned and complained',['NKF1'],'In Aug 2023'],['2023-10','Law enforcement arrested key suspects',[],'In Oct 2023']];
+d.graph.events=events.map(([date,title,entities,term],i)=>({id:'event-'+i,date,title,entities,certainty:i===7||i===9?'suspected':'reported',sourceText:sentence(term),sourceId:'sample-story'}));
+d.visual.scope='key';root.Sample={text,document:ChartCore.validate(d)};
+})(globalThis);

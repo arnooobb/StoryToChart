@@ -1,0 +1,37 @@
+return await (async()=>{
+const $=s=>document.querySelector(s),results=[],check=(ok,name)=>{results.push({name,pass:!!ok});if(!ok)throw Error(name);};
+const edit=(sel,value)=>{const el=$(sel);el.value=value;el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));};
+const d=ChartCore.empty();d.title='Review field checks';
+d.graph.entities=[{id:'A',name:'Alice',type:'person'},{id:'B',name:'Ben',type:'person'},{id:'C',name:'Clara',type:'person'}];
+d.graph.relationships=[{id:'r1',source:'A',target:'B',label:'Payment',type:'payment',amount:8000,certainty:'suspected',sourceText:'<img src=x onerror="window.badSource=true"> Alice allegedly paid Ben.'},{id:'r2',source:'B',target:'A',label:'Return payment',type:'payment',certainty:'reported'}];
+d.graph.events=[{id:'ev',title:'Payment discussion',date:'2024-05',entities:['A','B'],certainty:'unverified',sourceText:'A dated source passage.'}];
+for(const [i,n]of d.graph.entities.entries())d.layout.nodes[n.id]={x:100+i*350,y:150,width:190,height:68,pinned:false};
+await ChartApp.replaceDocument(d);const before=JSON.stringify(ChartApp.document);
+$('#review-chart-button').click();$('[data-review-tab="relationships"]').click();
+check(!$('#review-content img')&&!window.badSource&&$('#review-content').textContent.includes('<img'),'source wording renders as text, never executable markup');
+edit('[data-review-id="r1"] [data-field="target"]','C');
+edit('[data-review-id="r1"] [data-field="certainty"]','alleged');
+edit('[data-review-id="r1"] [data-field="date"]','2024-06');
+edit('[data-review-id="r1"] [data-field="amount"]','');
+$('[data-review-id="r2"] [data-keep]').click();
+$('[data-review-tab="events"]').click();
+edit('[data-review-id="ev"] [data-field="title"]','Corrected event');
+edit('[data-review-id="ev"] [data-field="date"]','2024-07');
+edit('[data-review-id="ev"] [data-field="certainty"]','reported');
+$('[data-review-id="ev"] [data-participant="C"]').click();
+$('#review-apply').click();
+check(ChartApp.document.graph.relationships.length===1,'individual relationship exclusion is applied');
+const r=ChartApp.document.graph.relationships[0];
+check(r.target==='C'&&r.certainty==='alleged'&&r.date==='2024-06','endpoint, certainty and date corrections survive application');
+check(r.amount===undefined,'clearing a known amount leaves it unknown rather than zero');
+const ev=ChartApp.document.graph.events[0];
+check(ev.title==='Corrected event'&&ev.date==='2024-07'&&ev.certainty==='reported'&&ev.entities.includes('C'),'event corrections and participant changes survive application');
+ChartApp.undo();check(JSON.stringify(ChartApp.document)===before,'one undo restores all review field changes and exclusions');
+$('#review-chart-button').click();$('[data-review-tab="relationships"]').click();
+edit('[data-review-id="r1"] [data-field="target"]','A');$('#review-apply').click();
+check($('#review-dialog').open&&JSON.stringify(ChartApp.document)===before,'a self-link cannot replace the current chart');
+$('#review-cancel').click();
+$('#review-chart-button').click();for(const keep of document.querySelectorAll('[data-keep]'))keep.click();
+check($('#review-apply').disabled,'an empty entity selection cannot be applied');$('#review-cancel').click();
+return results;
+})()
