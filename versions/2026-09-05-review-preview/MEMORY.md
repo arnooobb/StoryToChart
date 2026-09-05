@@ -1,5 +1,15 @@
 # Session log
 
+## 2026-09-06 — GitHub upload authorised
+
+Arnold requested pushing the current work to GitHub. Prepared the comparison branch codex/extraction-review-comparison for upload to arnooobb/StoryToChart, including extraction review, blank titles, New and colourful group boxes. Earlier notes describing these changes as local-only record their previous state. No merge into main requested.
+
+## 2026-09-05 — Colourful group boxes
+
+At Arnold's request, compared Claude Association Chart Builder v14's GPAL colours and applied the same six pastel fill/border pairs, plus three additional shades, to this comparison version. Group headings and collapse controls use darker matching colours. Collapsed group cards keep the group palette; selection retains its blue outline. Colours follow the document's group order, independent of visible filtering, and repeat after nine groups. No changes to graph facts, layout algorithms, parsing or earlier versions.
+
+Rebuilt index.html. All 49 existing automated tests and 11 browser checks passed, covering distinct sample fills, selection, collapse/expand, existing positions, unchanged facts, JSON reopen, SVG colours and PNG rendering. Inspected the final screenshot, saved as group-colours-preview.png. Changes remain local; no GitHub upload.
+
 ## 2026-09-05 — Blank title and New button
 
 At Arnold's request, new charts and newly extracted reports now have a blank title. Blank titles survive JSON validation, can be named or cleared using the title dialogue, and use a chart filename fallback for downloads. The blank title area remains focusable and can be opened with Enter/Space or double-click.
