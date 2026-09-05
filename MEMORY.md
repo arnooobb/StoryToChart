@@ -1,5 +1,11 @@
 # Session log
 
+## 2026-09-05 — Extraction comparison and proposal
+
+GitHub connection completed: the initial project commit was uploaded to private arnooobb/StoryToChart, with local and remote main verified identical. Compared the actual Claude v8 and GPT-6 story-parser functions on ten fictional inputs. Claude recognises titles and letter-only codes that ours misses, but its generic relationship guessing, certainty defaults and deduplication lose or misstate facts. Ours handles full names and payments better but misidentifies quoted speech and fails to flag an unhandled witness clause. Reviewed Claude's table import, pre-drawing review and editable HTML export in source only.
+
+Proposal saved in docs/2026-09-05-extraction-comparison-plan.md. First update would improve detection and relationship coverage and add review before drawing, retaining our layout. Table input and editable HTML export are later options. Application code is unchanged; wait for Arnold's approval before creating the updated version.
+
 ## 2026-09-05 — GitHub setup
 
 Arnold requested connection to the existing private repository https://github.com/arnooobb/StoryToChart and confirmed that the bundled Kite Tech example is fictional and may be uploaded. The remote was empty. Initialised local Git on main and prepared both the original application and the GPT-6 comparison version for the initial upload. Added .gitignore for local credentials, macOS metadata, browser sessions and temporary files; GITHUB.md identifies the working versions and the pending comparison plan. No application code changed. Earlier notes saying this folder is not a Git repository describe its previous state.
