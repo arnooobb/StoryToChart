@@ -1,5 +1,13 @@
 # Session log
 
+## 2026-09-05 — Blank title and New button
+
+At Arnold's request, new charts and newly extracted reports now have a blank title. Blank titles survive JSON validation, can be named or cleared using the title dialogue, and use a chart filename fallback for downloads. The blank title area remains focusable and can be opened with Enter/Space or double-click.
+
+Added New in the header. It clears the graph, source input, selection, search, layout view and undo history, returning to the source panel. Unsaved chart edits or unparsed source text require confirmation; cancellation preserves them. Unchanged saved documents start fresh without another prompt. Before-close protection now includes unparsed source text. Existing versions remain unchanged.
+
+Verification: two title regressions and 15 new browser assertions passed, plus the existing 24 review-flow, 8 review-field and 22 navigation/printing assertions. Inspected the blank opening screen at /tmp/story-new-chart-final.png. The full automated suite passed all 49 tests; 69 browser assertions passed in this session.
+
 ## 2026-09-05 — Completed review comparison version
 
 Arnold approved the proposed extraction/review update and requested a separate comparison version. Built this directory from the earlier GPT-6 preview; both existing application versions and all other pre-existing project files are byte-for-byte unchanged against baseline-hashes.json. Work is on local branch codex/extraction-review-comparison and is not pushed to GitHub.

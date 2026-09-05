@@ -2,6 +2,10 @@
 
 This is a separate comparison version. Open `index.html` in Chrome, Edge or Safari. It works offline on its own. The original application and the earlier GPT-6 preview remain unchanged.
 
+Charts open with a blank title. Double-click the blank title area beneath Relationship workspace, or focus it and press Enter, to give the chart a name. You can also clear an existing title. Untitled downloads use `chart.json`, `chart.svg` or `chart.png`.
+
+**New** starts an empty chart with a blank title and fresh undo history. It asks before clearing unsaved chart edits or unparsed report text. Cancel keeps the current work. A saved, unchanged chart can be closed without another prompt.
+
 ## Try the new flow
 
 1. Paste a report and choose **Extract & review**. Try `examples/review-comparison-report.txt` for a fictional example with titles, company names, letter-only codes, payments and unsupported wording.

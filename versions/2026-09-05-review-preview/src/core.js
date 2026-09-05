@@ -5,7 +5,7 @@ const clone=x=>structuredClone(x);
 const types=['person','company','organisation','account','location','object','event','other'];
 const certainty=['reported','admitted','suspected','alleged','unverified'];
 const moneyTypes=['payment','benefit','contract','transaction'];
-function empty(){return {version:1,title:'Untitled chart',graph:{entities:[],relationships:[],groups:[],events:[],sources:[]},layout:{mode:'relationship',nodes:{},groups:{}},visual:{routing:'adaptive',labels:true,scope:'all'}};}
+function empty(){return {version:1,title:'',graph:{entities:[],relationships:[],groups:[],events:[],sources:[]},layout:{mode:'relationship',nodes:{},groups:{}},visual:{routing:'adaptive',labels:true,scope:'all'}};}
 function validate(input){
  if(!input||typeof input!=='object')throw Error('Enter a JSON document with a graph object.');
  const d=clone(input.graph?input:{graph:input});const base=empty();
@@ -40,7 +40,7 @@ function dateLabel(d){if(!d)return '';const m=d.match(/^(\d{4})-(\d{2})/);return
 function parse(text){
  if(!text.trim())throw Error('Paste a story or JSON to begin.');
  if(/^[\[{]/.test(text.trim())){try{return validate(JSON.parse(text));}catch(e){throw Error('JSON: '+e.message);}}
- const d=empty();d.title='Extracted report';d.graph.sources=[{id:'source-1',text,kind:'pasted text'}];
+ const d=empty();d.graph.sources=[{id:'source-1',text,kind:'pasted text'}];
  const entities=new Map(),relations=[],warnings=[],handled=new Set(),mentioned=new Set();let counter=0;
  const add=(id,name=id,type='person',sourceText=name)=>{if(!entities.has(id))entities.set(id,{id,name,type,role:'',sourceText});return entities.get(id);};
  const companyEnd='Limited|Ltd|PLC|LLP|Inc|Incorporated|Corporation|Corp|LLC|Company|Co';
