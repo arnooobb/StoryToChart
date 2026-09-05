@@ -1,0 +1,73 @@
+{
+  "view": "Key links",
+  "entities": 32,
+  "visibleEntities": 17,
+  "relationships": 48,
+  "chosen": "Compact groups · four columns",
+  "metrics": {
+    "nodeOverlaps": 0,
+    "labelOverlaps": 0,
+    "edgeNodeHits": 0,
+    "edgeLabelHits": 0,
+    "crossings": 12,
+    "bends": 43,
+    "length": 10368.779888129946,
+    "groupOverlaps": 0,
+    "area": 1360418,
+    "cost": 26193
+  },
+  "candidates": [
+    {
+      "name": "Compact groups · four columns",
+      "nodeOverlaps": 0,
+      "labelOverlaps": 0,
+      "edgeNodeHits": 0,
+      "edgeLabelHits": 0,
+      "crossings": 12,
+      "bends": 43,
+      "length": 10368.779888129946,
+      "groupOverlaps": 0,
+      "area": 1360418,
+      "cost": 26193
+    },
+    {
+      "name": "Compact groups · three columns",
+      "nodeOverlaps": 0,
+      "labelOverlaps": 0,
+      "edgeNodeHits": 0,
+      "edgeLabelHits": 0,
+      "crossings": 15,
+      "bends": 47,
+      "length": 12044.6,
+      "groupOverlaps": 0,
+      "area": 1460952,
+      "cost": 31447
+    },
+    {
+      "name": "Layered groups · top to bottom",
+      "nodeOverlaps": 0,
+      "labelOverlaps": 0,
+      "edgeNodeHits": 0,
+      "edgeLabelHits": 0,
+      "crossings": 16,
+      "bends": 51,
+      "length": 14087.47899589933,
+      "groupOverlaps": 0,
+      "area": 2073007,
+      "cost": 40571
+    },
+    {
+      "name": "Layered groups · left to right",
+      "nodeOverlaps": 0,
+      "labelOverlaps": 0,
+      "edgeNodeHits": 0,
+      "edgeLabelHits": 0,
+      "crossings": 25,
+      "bends": 41,
+      "length": 9681.609240914859,
+      "groupOverlaps": 0,
+      "area": 1710492,
+      "cost": 41214
+    }
+  ]
+}

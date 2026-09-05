@@ -1,0 +1,17 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies, browser sessions and temporary output
+node_modules/
+.gstack/
+coverage/
+*.log
+*.tmp

@@ -1,0 +1,1207 @@
+{
+  "version": 1,
+  "title": "The Kite Tech network",
+  "graph": {
+    "entities": [
+      {
+        "id": "KTL",
+        "name": "Kite Tech Limited",
+        "type": "company",
+        "group": "KTL",
+        "role": ""
+      },
+      {
+        "id": "DDS",
+        "name": "Department of Digital Services",
+        "type": "organisation",
+        "group": "DDS",
+        "role": ""
+      },
+      {
+        "id": "ADS",
+        "name": "Apex Data Services Limited",
+        "type": "company",
+        "group": "ADS",
+        "role": ""
+      },
+      {
+        "id": "RHS",
+        "name": "Regional Hospital Supplies Office",
+        "type": "organisation",
+        "group": "RHS",
+        "role": ""
+      },
+      {
+        "id": "SLC",
+        "name": "Silverline Consultants Limited",
+        "type": "company",
+        "group": "SLC",
+        "role": ""
+      },
+      {
+        "id": "EDO",
+        "name": "Eastern District Office",
+        "type": "organisation",
+        "group": "EDO",
+        "role": ""
+      },
+      {
+        "id": "GBA",
+        "name": "Golden Bridge Advisory",
+        "type": "organisation",
+        "group": "GBA",
+        "role": ""
+      },
+      {
+        "id": "JHR",
+        "name": "Jade Harbour Restaurant",
+        "type": "location",
+        "group": "JHR",
+        "role": ""
+      },
+      {
+        "id": "MCB",
+        "name": "Metro Commercial Bank",
+        "type": "organisation",
+        "group": "MCB",
+        "role": ""
+      },
+      {
+        "id": "TSM1",
+        "name": "TSM1",
+        "type": "person",
+        "role": "Managing director / major shareholder",
+        "group": "KTL"
+      },
+      {
+        "id": "LPY1",
+        "name": "LPY1",
+        "type": "person",
+        "role": "Finance manager",
+        "group": "KTL"
+      },
+      {
+        "id": "CWH1",
+        "name": "CWH1",
+        "type": "person",
+        "role": "Sales manager",
+        "group": "KTL"
+      },
+      {
+        "id": "NKF1",
+        "name": "NKF1",
+        "type": "person",
+        "role": "Former project coordinator",
+        "group": "KTL"
+      },
+      {
+        "id": "Amy Ho",
+        "name": "Amy Ho",
+        "type": "person",
+        "role": "Receptionist",
+        "group": "KTL"
+      },
+      {
+        "id": "YMC1",
+        "name": "YMC1",
+        "type": "person",
+        "role": "Registered director",
+        "group": "SLC"
+      },
+      {
+        "id": "FHL1",
+        "name": "FHL1",
+        "type": "person",
+        "role": "Owner",
+        "group": "ADS"
+      },
+      {
+        "id": "FKL1",
+        "name": "FKL1",
+        "type": "person",
+        "role": "Account manager",
+        "group": "ADS"
+      },
+      {
+        "id": "LWM1",
+        "name": "LWM1",
+        "type": "person",
+        "role": "Senior procurement officer",
+        "group": "DDS"
+      },
+      {
+        "id": "HCK1",
+        "name": "HCK1",
+        "type": "person",
+        "role": "Chief systems manager",
+        "group": "DDS"
+      },
+      {
+        "id": "PSY1",
+        "name": "PSY1",
+        "type": "person",
+        "role": "IT officer",
+        "group": "DDS"
+      },
+      {
+        "id": "Ben Kwok",
+        "name": "Ben Kwok",
+        "type": "person",
+        "role": "Clerical officer",
+        "group": "DDS"
+      },
+      {
+        "id": "WSL1",
+        "name": "WSL1",
+        "type": "person",
+        "role": "Auditor",
+        "group": "DDS"
+      },
+      {
+        "id": "CTF1",
+        "name": "CTF1",
+        "type": "person",
+        "role": "Supplies manager",
+        "group": "RHS"
+      },
+      {
+        "id": "OKW1",
+        "name": "OKW1",
+        "type": "person",
+        "role": "Biomedical engineer",
+        "group": "RHS"
+      },
+      {
+        "id": "MYL1",
+        "name": "MYL1",
+        "type": "person",
+        "role": "Executive officer",
+        "group": "EDO"
+      },
+      {
+        "id": "BLS1",
+        "name": "BLS1",
+        "type": "person",
+        "role": "Relationship manager",
+        "group": "MCB"
+      },
+      {
+        "id": "KSK1",
+        "name": "KSK1",
+        "type": "person",
+        "role": "Associated with GBA",
+        "group": "GBA"
+      },
+      {
+        "id": "李志強",
+        "name": "李志強",
+        "type": "person",
+        "role": "Restaurant owner",
+        "group": "JHR"
+      },
+      {
+        "id": "KTL-account",
+        "name": "KTL bank account",
+        "type": "account",
+        "group": "KTL",
+        "role": "Bank not specified in story"
+      },
+      {
+        "id": "Rolex",
+        "name": "Rolex watch",
+        "type": "object",
+        "role": "Benefit received by HCK1",
+        "group": "DDS"
+      },
+      {
+        "id": "MYL-flat",
+        "name": "MYL1’s flat",
+        "type": "location",
+        "role": "Renovation benefit",
+        "group": "EDO"
+      },
+      {
+        "id": "KTL-carpark",
+        "name": "KTL car park",
+        "type": "location",
+        "role": "Cash handover location",
+        "group": "KTL"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "employment-1",
+        "source": "TSM1",
+        "target": "KTL",
+        "label": "Managing director / major shareholder",
+        "type": "ownership",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "TSM1 is the managing director and major shareholder of Kite Tech Limited (KTL) and Silverline Consultants Limited (SLC)."
+      },
+      {
+        "id": "employment-2",
+        "source": "LPY1",
+        "target": "KTL",
+        "label": "Finance manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "LPY1 is the wife of TSM1 and the finance manager of KTL."
+      },
+      {
+        "id": "employment-3",
+        "source": "CWH1",
+        "target": "KTL",
+        "label": "Sales manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "CWH1 is the brother of LPY1 and the sales manager of KTL."
+      },
+      {
+        "id": "employment-4",
+        "source": "NKF1",
+        "target": "KTL",
+        "label": "Former project coordinator",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "NKF1 was a project coordinator of KTL from Jan 2021 to Aug 2023.",
+        "date": "2021-01",
+        "endDate": "2023-08"
+      },
+      {
+        "id": "employment-5",
+        "source": "Amy Ho",
+        "target": "KTL",
+        "label": "Receptionist",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "(\"Amy Ho\") is the receptionist of KTL."
+      },
+      {
+        "id": "employment-6",
+        "source": "YMC1",
+        "target": "SLC",
+        "label": "Registered director",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "YMC1 is the registered director of SLC."
+      },
+      {
+        "id": "employment-7",
+        "source": "FHL1",
+        "target": "ADS",
+        "label": "Owner",
+        "type": "ownership",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "FHL1 is the owner of Apex Data Services Limited (ADS)."
+      },
+      {
+        "id": "employment-8",
+        "source": "FKL1",
+        "target": "ADS",
+        "label": "Account manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "FKL1 is the son of FHL1 and an account manager of ADS."
+      },
+      {
+        "id": "employment-9",
+        "source": "LWM1",
+        "target": "DDS",
+        "label": "Senior procurement officer",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "LWM1 is a senior procurement officer of the Department of Digital Services (DDS)."
+      },
+      {
+        "id": "employment-10",
+        "source": "HCK1",
+        "target": "DDS",
+        "label": "Chief systems manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "HCK1 is the chief systems manager of DDS."
+      },
+      {
+        "id": "employment-11",
+        "source": "PSY1",
+        "target": "DDS",
+        "label": "IT officer",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "PSY1 is an IT officer of DDS."
+      },
+      {
+        "id": "employment-12",
+        "source": "Ben Kwok",
+        "target": "DDS",
+        "label": "Clerical officer",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "(\"Ben Kwok\") is a clerical officer of DDS."
+      },
+      {
+        "id": "employment-13",
+        "source": "WSL1",
+        "target": "DDS",
+        "label": "Auditor",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "WSL1 is an auditor of DDS."
+      },
+      {
+        "id": "employment-14",
+        "source": "CTF1",
+        "target": "RHS",
+        "label": "Supplies manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "CTF1 is the supplies manager of the Regional Hospital Supplies Office (RHS)."
+      },
+      {
+        "id": "employment-15",
+        "source": "OKW1",
+        "target": "RHS",
+        "label": "Biomedical engineer",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "OKW1 is a biomedical engineer of RHS."
+      },
+      {
+        "id": "employment-16",
+        "source": "MYL1",
+        "target": "EDO",
+        "label": "Executive officer",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "MYL1 is an executive officer of the Eastern District Office (EDO)."
+      },
+      {
+        "id": "employment-17",
+        "source": "BLS1",
+        "target": "MCB",
+        "label": "Relationship manager",
+        "type": "employment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "BLS1 is a relationship manager of Metro Commercial Bank (MCB)."
+      },
+      {
+        "id": "employment-18",
+        "source": "KSK1",
+        "target": "GBA",
+        "label": "Associated with GBA",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Mar 2021 KSK1 of Golden Bridge Advisory (GBA) introduced TSM1 to HCK1."
+      },
+      {
+        "id": "employment-19",
+        "source": "李志強",
+        "target": "JHR",
+        "label": "Restaurant owner",
+        "type": "ownership",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted."
+      },
+      {
+        "id": "slc-owner",
+        "source": "TSM1",
+        "target": "SLC",
+        "label": "Managing director / major shareholder",
+        "type": "ownership",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "TSM1 is the managing director and major shareholder of Kite Tech Limited (KTL) and Silverline Consultants Limited (SLC)."
+      },
+      {
+        "id": "wife",
+        "source": "LPY1",
+        "target": "TSM1",
+        "label": "Wife of",
+        "type": "family",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "LPY1 is the wife of TSM1 and the finance manager of KTL."
+      },
+      {
+        "id": "brother",
+        "source": "CWH1",
+        "target": "LPY1",
+        "label": "Brother of",
+        "type": "family",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "CWH1 is the brother of LPY1 and the sales manager of KTL."
+      },
+      {
+        "id": "son",
+        "source": "FKL1",
+        "target": "FHL1",
+        "label": "Son of",
+        "type": "family",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "FKL1 is the son of FHL1 and an account manager of ADS."
+      },
+      {
+        "id": "cover",
+        "source": "TSM1",
+        "target": "FHL1",
+        "label": "Cover-bid agreement",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Sep 2021 TSM1 and FHL1 agreed that KTL and ADS would submit cover bids for each other.",
+        "date": "2021-09"
+      },
+      {
+        "id": "cover-companies",
+        "source": "KTL",
+        "target": "ADS",
+        "label": "Mutual cover bids",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Sep 2021 TSM1 and FHL1 agreed that KTL and ADS would submit cover bids for each other.",
+        "date": "2021-09"
+      },
+      {
+        "id": "introduced-dds",
+        "source": "TSM1",
+        "target": "HCK1",
+        "label": "Introduced by KSK1",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Mar 2021 KSK1 of Golden Bridge Advisory (GBA) introduced TSM1 to HCK1.",
+        "date": "2021-03"
+      },
+      {
+        "id": "dinner",
+        "source": "TSM1",
+        "target": "HCK1",
+        "label": "Dinner at JHR",
+        "type": "meeting",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "date": "2021-11"
+      },
+      {
+        "id": "cash-hck",
+        "source": "TSM1",
+        "target": "HCK1",
+        "label": "Cash benefit",
+        "type": "payment",
+        "certainty": "admitted",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "amount": 120000,
+        "currency": "HKD",
+        "date": "2021-11"
+      },
+      {
+        "id": "watch",
+        "source": "TSM1",
+        "target": "HCK1",
+        "label": "Rolex watch",
+        "type": "benefit",
+        "certainty": "admitted",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "date": "2021-11",
+        "objectId": "Rolex"
+      },
+      {
+        "id": "watch-possession",
+        "source": "HCK1",
+        "target": "Rolex",
+        "label": "Received",
+        "type": "association",
+        "certainty": "admitted",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "date": "2021-11"
+      },
+      {
+        "id": "envelope",
+        "source": "TSM1",
+        "target": "LWM1",
+        "label": "Envelope of cash",
+        "type": "payment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1.",
+        "date": "2022-03",
+        "notes": "Witnessed by NKF1 in the KTL car park. Amount not stated."
+      },
+      {
+        "id": "witness",
+        "source": "NKF1",
+        "target": "LWM1",
+        "label": "Witnessed cash handover",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1.",
+        "date": "2022-03"
+      },
+      {
+        "id": "kickback",
+        "source": "TSM1",
+        "target": "LWM1",
+        "label": "8% kickbacks",
+        "type": "payment",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "LWM1 accepted kickbacks of 8% from TSM1 and awarded 19 of 23 DDS quotations to KTL.",
+        "rate": "8%"
+      },
+      {
+        "id": "quotations",
+        "source": "LWM1",
+        "target": "KTL",
+        "label": "Awarded 19 of 23 quotations",
+        "type": "contract",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "LWM1 accepted kickbacks of 8% from TSM1 and awarded 19 of 23 DDS quotations to KTL."
+      },
+      {
+        "id": "intro-rhs1",
+        "source": "TSM1",
+        "target": "CTF1",
+        "label": "Introduced by KSK1",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In May 2022 KSK1 introduced TSM1 and FHL1 to CTF1.",
+        "date": "2022-05"
+      },
+      {
+        "id": "intro-rhs2",
+        "source": "FHL1",
+        "target": "CTF1",
+        "label": "Introduced by KSK1",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In May 2022 KSK1 introduced TSM1 and FHL1 to CTF1.",
+        "date": "2022-05"
+      },
+      {
+        "id": "order",
+        "source": "RHS",
+        "target": "ADS",
+        "label": "Supply order",
+        "type": "contract",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2022 RHS awarded a HK$3.1 million order to ADS, and FKL1 is suspected of paying a 6% rebate to CTF1.",
+        "amount": 3100000,
+        "currency": "HKD",
+        "date": "2022-11"
+      },
+      {
+        "id": "rebate",
+        "source": "FKL1",
+        "target": "CTF1",
+        "label": "6% rebate",
+        "type": "payment",
+        "certainty": "suspected",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2022 RHS awarded a HK$3.1 million order to ADS, and FKL1 is suspected of paying a 6% rebate to CTF1.",
+        "rate": "6%",
+        "date": "2022-11",
+        "notes": "No absolute rebate amount inferred; calculation basis is not confirmed."
+      },
+      {
+        "id": "certificate",
+        "source": "OKW1",
+        "target": "RHS",
+        "label": "Signed acceptance · goods undelivered",
+        "type": "association",
+        "certainty": "alleged",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "OKW1 allegedly signed an acceptance certificate for tablets that were never delivered."
+      },
+      {
+        "id": "renovation",
+        "source": "SLC",
+        "target": "MYL1",
+        "label": "Flat renovation",
+        "type": "benefit",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Aug 2022 SLC paid HK$260,000 for the renovation of the flat of MYL1.",
+        "amount": 260000,
+        "currency": "HKD",
+        "date": "2022-08",
+        "objectId": "MYL-flat"
+      },
+      {
+        "id": "flat",
+        "source": "MYL1",
+        "target": "MYL-flat",
+        "label": "Flat of MYL1",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Aug 2022 SLC paid HK$260,000 for the renovation of the flat of MYL1."
+      },
+      {
+        "id": "edo-contract",
+        "source": "EDO",
+        "target": "SLC",
+        "label": "Contract award",
+        "type": "contract",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Feb 2023 EDO awarded a HK$1.2 million contract to SLC on the recommendation of MYL1.",
+        "amount": 1200000,
+        "currency": "HKD",
+        "date": "2023-02"
+      },
+      {
+        "id": "recommendation",
+        "source": "MYL1",
+        "target": "SLC",
+        "label": "Recommended contract award",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Feb 2023 EDO awarded a HK$1.2 million contract to SLC on the recommendation of MYL1.",
+        "date": "2023-02"
+      },
+      {
+        "id": "deposits",
+        "source": "LPY1",
+        "target": "KTL-account",
+        "label": "11 cash deposits",
+        "type": "transaction",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "In Apr 2023 LPY1 made eleven cash deposits just below HK$120,000 into the KTL account, and BLS1 is suspected of advising her.",
+        "date": "2023-04",
+        "notes": "Each deposit just below HK$120,000. Exact amounts and aggregate total are unknown."
+      },
+      {
+        "id": "account",
+        "source": "KTL",
+        "target": "KTL-account",
+        "label": "Account holder",
+        "type": "ownership",
+        "certainty": "reported",
+        "directed": true,
+        "sourceId": "sample-story",
+        "sourceText": "TSM1 is the managing director and major shareholder of Kite Tech Limited (KTL) and Silverline Consultants Limited (SLC)."
+      },
+      {
+        "id": "advice",
+        "source": "BLS1",
+        "target": "LPY1",
+        "label": "Advised on deposits",
+        "type": "association",
+        "certainty": "suspected",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Apr 2023 LPY1 made eleven cash deposits just below HK$120,000 into the KTL account, and BLS1 is suspected of advising her.",
+        "date": "2023-04"
+      },
+      {
+        "id": "restaurant",
+        "source": "TSM1",
+        "target": "JHR",
+        "label": "Hosted dinner",
+        "type": "meeting",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "date": "2021-11"
+      },
+      {
+        "id": "carpark",
+        "source": "TSM1",
+        "target": "KTL-carpark",
+        "label": "Cash handover location",
+        "type": "association",
+        "certainty": "reported",
+        "directed": false,
+        "sourceId": "sample-story",
+        "sourceText": "In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1.",
+        "date": "2022-03"
+      }
+    ],
+    "groups": [
+      {
+        "id": "KTL",
+        "name": "Kite Tech Limited",
+        "shortName": "KTL"
+      },
+      {
+        "id": "DDS",
+        "name": "Department of Digital Services",
+        "shortName": "DDS"
+      },
+      {
+        "id": "ADS",
+        "name": "Apex Data Services Limited",
+        "shortName": "ADS"
+      },
+      {
+        "id": "RHS",
+        "name": "Regional Hospital Supplies Office",
+        "shortName": "RHS"
+      },
+      {
+        "id": "SLC",
+        "name": "Silverline Consultants Limited",
+        "shortName": "SLC"
+      },
+      {
+        "id": "EDO",
+        "name": "Eastern District Office",
+        "shortName": "EDO"
+      },
+      {
+        "id": "GBA",
+        "name": "Golden Bridge Advisory",
+        "shortName": "GBA"
+      },
+      {
+        "id": "JHR",
+        "name": "Jade Harbour Restaurant",
+        "shortName": "JHR"
+      },
+      {
+        "id": "MCB",
+        "name": "Metro Commercial Bank",
+        "shortName": "MCB"
+      }
+    ],
+    "events": [
+      {
+        "id": "event-0",
+        "date": "2021-01",
+        "title": "NKF1 began work at KTL",
+        "entities": [
+          "NKF1",
+          "KTL"
+        ],
+        "certainty": "reported",
+        "sourceText": "NKF1 was a project coordinator of KTL from Jan 2021 to Aug 2023.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-1",
+        "date": "2021-03",
+        "title": "KSK1 introduced TSM1 to HCK1",
+        "entities": [
+          "KSK1",
+          "TSM1",
+          "HCK1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Mar 2021 KSK1 of Golden Bridge Advisory (GBA) introduced TSM1 to HCK1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-2",
+        "date": "2021-09",
+        "title": "Cover-bid agreement",
+        "entities": [
+          "TSM1",
+          "FHL1",
+          "KTL",
+          "ADS"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Sep 2021 TSM1 and FHL1 agreed that KTL and ADS would submit cover bids for each other.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-3",
+        "date": "2021-11",
+        "title": "Dinner, Rolex and HK$120,000",
+        "entities": [
+          "TSM1",
+          "HCK1",
+          "JHR"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-4",
+        "date": "2022-03",
+        "title": "Cash handover witnessed by NKF1",
+        "entities": [
+          "TSM1",
+          "LWM1",
+          "NKF1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-5",
+        "date": "2022-05",
+        "title": "Introductions to CTF1",
+        "entities": [
+          "KSK1",
+          "TSM1",
+          "FHL1",
+          "CTF1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In May 2022 KSK1 introduced TSM1 and FHL1 to CTF1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-6",
+        "date": "2022-08",
+        "title": "SLC funded MYL1’s renovation",
+        "entities": [
+          "SLC",
+          "MYL1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Aug 2022 SLC paid HK$260,000 for the renovation of the flat of MYL1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-7",
+        "date": "2022-11",
+        "title": "HK$3.1m order and suspected rebate",
+        "entities": [
+          "RHS",
+          "ADS",
+          "FKL1",
+          "CTF1"
+        ],
+        "certainty": "suspected",
+        "sourceText": "In Nov 2022 RHS awarded a HK$3.1 million order to ADS, and FKL1 is suspected of paying a 6% rebate to CTF1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-8",
+        "date": "2023-02",
+        "title": "EDO awarded SLC HK$1.2m contract",
+        "entities": [
+          "EDO",
+          "SLC",
+          "MYL1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Feb 2023 EDO awarded a HK$1.2 million contract to SLC on the recommendation of MYL1.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-9",
+        "date": "2023-04",
+        "title": "Eleven cash deposits; suspected advice",
+        "entities": [
+          "LPY1",
+          "BLS1",
+          "KTL-account"
+        ],
+        "certainty": "suspected",
+        "sourceText": "In Apr 2023 LPY1 made eleven cash deposits just below HK$120,000 into the KTL account, and BLS1 is suspected of advising her.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-10",
+        "date": "2023-06",
+        "title": "WSL1 reported quotation pattern",
+        "entities": [
+          "WSL1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Jun 2023 WSL1 reported the quotation pattern.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-11",
+        "date": "2023-08",
+        "title": "NKF1 resigned and complained",
+        "entities": [
+          "NKF1"
+        ],
+        "certainty": "reported",
+        "sourceText": "In Aug 2023 NKF1 resigned and complained.",
+        "sourceId": "sample-story"
+      },
+      {
+        "id": "event-12",
+        "date": "2023-10",
+        "title": "Law enforcement arrested key suspects",
+        "entities": [],
+        "certainty": "reported",
+        "sourceText": "In Oct 2023 law enforcement arrested the key suspects.",
+        "sourceId": "sample-story"
+      }
+    ],
+    "sources": [
+      {
+        "id": "sample-story",
+        "kind": "user-supplied sample",
+        "text": "TSM1 is the managing director and major shareholder of Kite Tech Limited (KTL) and Silverline Consultants Limited (SLC). LPY1 is the wife of TSM1 and the finance manager of KTL. CWH1 is the brother of LPY1 and the sales manager of KTL. YMC1 is the registered director of SLC. NKF1 was a project coordinator of KTL from Jan 2021 to Aug 2023. (\"Amy Ho\") is the receptionist of KTL.\nFHL1 is the owner of Apex Data Services Limited (ADS). FKL1 is the son of FHL1 and an account manager of ADS. In Sep 2021 TSM1 and FHL1 agreed that KTL and ADS would submit cover bids for each other.\nLWM1 is a senior procurement officer of the Department of Digital Services (DDS). HCK1 is the chief systems manager of DDS. PSY1 is an IT officer of DDS. (\"Ben Kwok\") is a clerical officer of DDS. WSL1 is an auditor of DDS.\nIn Mar 2021 KSK1 of Golden Bridge Advisory (GBA) introduced TSM1 to HCK1. In Nov 2021 TSM1 hosted a dinner for HCK1 at Jade Harbour Restaurant (JHR), owned by (\"李志強\"), and afterwards gave HCK1 a Rolex watch and HK$120,000 in cash, which HCK1 admitted. In Mar 2022 TSM1 handed an envelope of cash to LWM1 in the KTL car park, witnessed by NKF1. LWM1 accepted kickbacks of 8% from TSM1 and awarded 19 of 23 DDS quotations to KTL.\nCTF1 is the supplies manager of the Regional Hospital Supplies Office (RHS). OKW1 is a biomedical engineer of RHS. In May 2022 KSK1 introduced TSM1 and FHL1 to CTF1. In Nov 2022 RHS awarded a HK$3.1 million order to ADS, and FKL1 is suspected of paying a 6% rebate to CTF1. OKW1 allegedly signed an acceptance certificate for tablets that were never delivered.\nMYL1 is an executive officer of the Eastern District Office (EDO). In Aug 2022 SLC paid HK$260,000 for the renovation of the flat of MYL1. In Feb 2023 EDO awarded a HK$1.2 million contract to SLC on the recommendation of MYL1.\nBLS1 is a relationship manager of Metro Commercial Bank (MCB). In Apr 2023 LPY1 made eleven cash deposits just below HK$120,000 into the KTL account, and BLS1 is suspected of advising her. In Jun 2023 WSL1 reported the quotation pattern. In Aug 2023 NKF1 resigned and complained. In Oct 2023 law enforcement arrested the key suspects."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "relationship",
+    "nodes": {
+      "KTL": {
+        "x": 423,
+        "y": 232,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "TSM1": {
+        "x": 423,
+        "y": 98,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "LPY1": {
+        "x": 703,
+        "y": 98,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "CWH1": {
+        "x": 423,
+        "y": 366,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "NKF1": {
+        "x": 703,
+        "y": 232,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "KTL-account": {
+        "x": 703,
+        "y": 366,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "ADS": {
+        "x": 66,
+        "y": 98,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "FHL1": {
+        "x": 66,
+        "y": 366,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "FKL1": {
+        "x": 66,
+        "y": 232,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "RHS": {
+        "x": 66,
+        "y": 613,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "CTF1": {
+        "x": 66,
+        "y": 747,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "SLC": {
+        "x": 1060,
+        "y": 232,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "EDO": {
+        "x": 1417,
+        "y": 165,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "MYL1": {
+        "x": 1417,
+        "y": 299,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "LWM1": {
+        "x": 423,
+        "y": 613,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "HCK1": {
+        "x": 423,
+        "y": 747,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      },
+      "BLS1": {
+        "x": 780,
+        "y": 680,
+        "width": 190,
+        "height": 68,
+        "pinned": false
+      }
+    },
+    "groups": {},
+    "lastCandidates": [
+      {
+        "name": "Compact groups · four columns",
+        "nodeOverlaps": 0,
+        "labelOverlaps": 0,
+        "edgeNodeHits": 0,
+        "edgeLabelHits": 0,
+        "crossings": 12,
+        "bends": 43,
+        "length": 10368.779888129946,
+        "groupOverlaps": 0,
+        "area": 1360418,
+        "cost": 26193
+      },
+      {
+        "name": "Compact groups · three columns",
+        "nodeOverlaps": 0,
+        "labelOverlaps": 0,
+        "edgeNodeHits": 0,
+        "edgeLabelHits": 0,
+        "crossings": 15,
+        "bends": 47,
+        "length": 12044.6,
+        "groupOverlaps": 0,
+        "area": 1460952,
+        "cost": 31447
+      },
+      {
+        "name": "Layered groups · top to bottom",
+        "nodeOverlaps": 0,
+        "labelOverlaps": 0,
+        "edgeNodeHits": 0,
+        "edgeLabelHits": 0,
+        "crossings": 16,
+        "bends": 51,
+        "length": 14087.47899589933,
+        "groupOverlaps": 0,
+        "area": 2073007,
+        "cost": 40571
+      },
+      {
+        "name": "Layered groups · left to right",
+        "nodeOverlaps": 0,
+        "labelOverlaps": 0,
+        "edgeNodeHits": 0,
+        "edgeLabelHits": 0,
+        "crossings": 25,
+        "bends": 41,
+        "length": 9681.609240914859,
+        "groupOverlaps": 0,
+        "area": 1710492,
+        "cost": 41214
+      }
+    ],
+    "lastChosen": "Compact groups · four columns"
+  },
+  "visual": {
+    "routing": "adaptive",
+    "labels": true,
+    "scope": "key"
+  },
+  "extraction": {
+    "kind": "reviewed",
+    "warnings": [],
+    "notice": "Reviewed example prepared from the supplied story. “Reported” means stated in the story, not independently proven. Click Parse text to test automatic extraction."
+  }
+}
